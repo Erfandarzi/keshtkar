@@ -25,7 +25,7 @@ import ResultPlt
 # ============================================= INITIALIZATION =========================================================
 BATCH_SIZE = 32
 NUMBER_CLASS = 10
-EPOCH = 10
+EPOCH = 100
 SaveDirectory = os.path.join(os.getcwd(), 'saved_models')
 ModelName = 'CNN_Trained_Model'
 
