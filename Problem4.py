@@ -17,7 +17,7 @@ lr=0.001
 
 
 # Load MNIST dataset
-(train_data,train_targets),(test_data,test_targets)=boston_housing.load_data(test_split=0.1)
+(train_data,train_targets),(test_data,test_targets)=boston_housing.load_data(test_split=0.8)
 
 #Splitting Data
 # train_data= train_data.astype('float32')
