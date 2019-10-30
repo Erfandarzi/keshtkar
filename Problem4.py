@@ -44,8 +44,8 @@ model.summary()
 
 # Train
 history = model.fit(train_data, train_targets,validation_data=(test_data,test_targets),nb_epoch=nb_epoch, batch_size=batch_size, verbose=1)
-print(np.sqrt(mean_squared_error(test_targets, model.predict(test_data)[:, 0])))
-# Plot training & validation loss values
+print('MSE=',np.sqrt(mean_squared_error(test_targets, model.predict(test_data)[:, 0])))
+print('Maximum error=',np.amax(np.abs(test_targets, model.predict(test_data)[:, 0])))# Plot training & validation loss values
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.title('Model loss')
