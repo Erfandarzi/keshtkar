@@ -13,11 +13,11 @@ import pandas as pd
 batch_size = 32
 nb_classes = 10
 nb_epoch = 30
-lr=0.001
+lr=0.01
 
 
 # Load MNIST dataset
-(X_in, y_in), (X_test, y_test) = mnist.load_data()
+(X_in, y_train), (X_test, y_test) = mnist.load_data()
 
 #Splitting Data
 X_val = X_in[40000:].reshape(20000, 784)
@@ -45,10 +45,10 @@ Y_test = np_utils.to_categorical(y_test, nb_classes)
 model = Sequential()
 model.add(Dense(output_dim=512, input_dim=784, init='normal'))
 model.add(Activation('relu'))
-model.add(Dense(output_dim=512, input_dim=512, init='normal'))
-model.add(Activation('relu'))
-model.add(Dense(output_dim=512, input_dim=512, init='normal'))
-model.add(Activation('relu'))
+# model.add(Dense(output_dim=512, input_dim=512, init='normal'))
+# model.add(Activation('relu'))
+# model.add(Dense(output_dim=512, input_dim=512, init='normal'))
+# model.add(Activation('relu'))
 model.add(Dense(output_dim=10, input_dim=512, init='normal'))
 model.add(Activation('softmax'))
 
